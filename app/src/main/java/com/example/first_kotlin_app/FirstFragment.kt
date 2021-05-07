@@ -15,11 +15,21 @@ import androidx.navigation.fragment.findNavController
  */
 class FirstFragment : Fragment() {
 
-    private fun countMe(view: View) {
+    private fun plus(view: View) {
         val showCountTextView = view.findViewById<TextView>(R.id.textview_first)
         val countString = showCountTextView.text.toString()
         var count = countString.toInt()
         count++
+        showCountTextView.text = count.toString()
+    }
+
+    private fun minus(view: View) {
+        val showCountTextView = view.findViewById<TextView>(R.id.textview_first)
+        val countString = showCountTextView.text.toString()
+        var count = countString.toInt()
+        if(count > 0){
+            count--
+        }
         showCountTextView.text = count.toString()
     }
 
@@ -45,8 +55,12 @@ class FirstFragment : Fragment() {
             myToast.show()
         }
 
-        view.findViewById<Button>(R.id.count_button).setOnClickListener {
-            countMe(view)
+        view.findViewById<Button>(R.id.plus_button).setOnClickListener {
+            plus(view)
+        }
+
+        view.findViewById<Button>(R.id.minus_button).setOnClickListener {
+            minus(view)
         }
     }
 }
