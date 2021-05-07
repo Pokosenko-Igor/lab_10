@@ -50,10 +50,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 
     <Button
-        android:id="@+id/count_button"
+        android:id="@+id/minus_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/count_button"
+        android:text="@string/minus_button"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/buttonBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plus_button" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus_button"
         android:textColor="@color/black"
         app:backgroundTint="@color/buttonBackground"
         app:layout_constraintBottom_toBottomOf="parent"
